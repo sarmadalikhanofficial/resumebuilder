@@ -1,0 +1,336 @@
+@font-face {
+    font-family: "sf-rounded";
+    src: url(./SF-Pro-Rounded-Medium.otf);
+}
+
+@font-face {
+    font-family: "cinzel";
+    src: url(./Cinzel-Bold.otf);
+}
+
+@font-face {
+    font-family: "conthrax-sf";
+    src: url(./conthrax-sb.otf);
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0e1111;
+    color: #333; /* Default text color */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* <uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 300 to 800
+
+.open-sans-<uniquifier> {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+*/
+
+.main-image img {
+    width: 150px;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+
+body.dark-mode {
+    background-color: #fff; /* White mode color  */
+    color: #0e1111;
+}
+
+
+
+p.dark-mode,
+label.dark-mode,
+fieldset.dark-mode legend {
+    color: white; /* Set text color for headers, paragraphs, and labels in dark mode */
+}
+
+
+
+
+
+#myButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: auto;
+    display: block;
+    /* width: 100%; */
+    background-color: rgb(36, 47, 51);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-top: 290%;
+    font-size: 18px;
+    font-family: 'sf-rounded';
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    max-width: 300px;
+    margin: auto;
+    transition: background-color 0.3s, color 0.3s; /* Added color transition */
+    z-index: 1000; /* Ensure it’s above other elements */
+    
+}
+
+#myButton:hover {
+    background-color: rgb(30, 40, 43);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    transform: scale(1.0);
+}
+
+
+/* Dark mode styling for #myButton */
+body.dark-mode #myButton {
+    background-color: rgb(238, 238, 238); /* Keep the dark background */
+    color: #000; /* Ensure text color is white */
+}
+
+
+
+
+form {
+    margin: auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    max-width: 600px;
+    transition: background-color 0.3s;
+}
+
+form.dark-mode {
+    background-color: #2a2f32;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: 'cinzel';
+    
+}
+body.dark-mode h1 {
+    color: rgb(0, 0, 0); /* Change label text to white in dark mode */
+}
+
+
+fieldset {
+    border: 2px solid rgb(135, 230, 235);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: aliceblue;
+    transition: background-color 0.3s;
+}
+
+fieldset.dark-mode {
+    background-color: #3a3f43;
+}
+
+legend {
+    font-weight: bold;
+    text-align: left;
+    color: rgb(34, 29, 29);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: rgb(255, 255, 255);
+}
+
+body.dark-mode label {
+    color: rgb(0, 0, 0); /* Change label text to white in dark mode */
+}
+
+input, textarea {
+    margin-top: 4px;
+    padding: 8px;
+    width: calc(100% - 1px);
+    border: 1px solid skyblue;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input.dark-mode, textarea.dark-mode {
+    background-color: #2a2f32;
+    color: white;
+    border-color: #555;
+}
+
+button {
+    display: block;
+    width: 100%;
+    background-color: skyblue;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: 'sf-rounded';
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #66b3ff;
+}
+
+#resume-display {
+    max-width: 550px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid skyblue;
+    border-radius: 8px;
+    background-color: rgb(228, 242, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s;
+    outline: none;
+}
+
+#resume-display.dark-mode {
+    background-color: #2a2f32;
+    color: white;   
+}
+
+#resume-display.dark-mode * {
+    color: rgb(255, 255, 255);
+  }
+
+
+#downloadPDF {
+    display: block;
+    width: 100%; /* Matches the full width of the container */
+    max-width: 600px; /* Same max-width as #resume-display */
+    margin: 20px auto; /* Center the button */
+    background-color: skyblue;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    font-family: 'sf-rounded';
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#downloadPDF:hover {
+    background-color: #66b3ff;
+}
+
+#share{
+    /* position: fixed; */
+    /* bottom: 100px; */
+    /* right: 100px; */
+    width: auto;
+    display: block;
+    /* width: 100%; */
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-top: 290%;
+    font-size: 18px;
+    font-family: 'sf-rounded';
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    max-width: 300px;
+    margin: auto;
+    transition: background-color 0.3s, color 0.3s; /* Added color transition */
+    z-index: 1000; /* Ensure it’s above other elements */
+    color: white;
+    }
+
+#share{
+    color: rgb(255, 255, 255);
+}
+
+.dark-mode #share{
+    color: rgb(0, 0, 0);
+
+}
+
+.text{
+    margin-left: 15px;
+}
+.share-link{
+    color: white;
+    display: block;
+    margin-left: 15px;
+}
+
+ /*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
+
+
+/* Footer container styling */
+
+footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    font-family: 'sf-rounded';
+}
+
+/* Remove underline from links */
+footer a, footer .sxr {
+    font-family: "conthrax-sf"; /* Apply Conthrax font */
+    color: rgb(255, 255, 255); /* White color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s, transform 0.3s ease; /* Smooth transition for color and scaling */
+}
+
+/* Dark mode footer text color */
+.dark-mode footer {
+    color: rgb(0, 0, 0);
+}
+
+.dark-mode .sxr:hover {
+    font-family: "conthrax-sf"; 
+    color: #66b3ff;
+    text-decoration: none; /* remove underline */
+    transition: color 0.3s, transform 0.3s ease; /* smooth transition for color and scaling */
+
+}
+
+/* Link hover color */
+footer .sxr:hover {
+    font-family: "conthrax-sf"; 
+    color: #66b3ff;
+    text-decoration: none; /* remove underline */
+    transition: color 0.3s, transform 0.3s ease; /* smooth transition for color and scaling */
+ 
+}
+
+.dark-mode a:hover {
+    font-family: "conthrax-sf"; 
+    color: #66b3ff;
+    text-decoration: none; /* remove underline */
+    transition: color 0.3s, transform 0.3s ease; /* smooth transition for color and scaling */
+}
+
+/* dark mode color for @sxrmd.ai text */
+.dark-mode footer .sxr {
+    color: rgb(0, 0, 0);
+}
+
+footer a:focus, footer a:active {
+    outline: none; 
+}
